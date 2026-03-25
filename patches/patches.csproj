@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+	  <AssemblyName>Patch Detecter</AssemblyName>
+	  <ApplicationTitle>Patch Detecter</ApplicationTitle>
+	  <Product>Patch Detecter</Product>
+	  <Description>Patch Detecter</Description>
+	  <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <SelfContained>true</SelfContained>
+	  <PublishSingleFile>true</PublishSingleFile>
+	  <IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
+	  <IncludeAllContentForSelfExtract>false</IncludeAllContentForSelfExtract>
+	  <PublishReadyToRun>true</PublishReadyToRun>
+	  <DebugType>none</DebugType>
+	  <IncludeSymbols>false</IncludeSymbols>
+	  <IncludeDocumentationFile>false</IncludeDocumentationFile>
+  </PropertyGroup>
+
+</Project>
