@@ -169,6 +169,42 @@ public static class McPatchCatalog
                     }
                 ]
             },
+            new PatchDefinition
+            {
+                Id = "fullbright-gdk",
+                DisplayName = "Fullbright (GDK)",
+                Category = "visual",
+                Description = "Removes darkness from the game. GDK version uses function hooking.",
+                Source = "GDK patcher",
+                Variants =
+                [
+                    new PatchVariant
+                    {
+                        Label = "GDK",
+                        SearchPattern = "48 83 EC ? 48 8B 01 48 8D 54 24 ? 41 B8 ? ? ? ? 48 8B 40 ? FF 15 ? ? ? ? 48 8B 10 48 8B 42 ? 48 8B 88 ? ? ? ? 48 85 C9 74 ? E8 ? ? ? ? 48 83 C4 ? C3 F3 0F 10 42 ? 48 83 C4 ? C3 CC CC CC CC CC CC CC CC CC CC CC CC CC 48 89 5C 24 ? 57 48 83 EC ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 44 24 ? 48 8B 01 8B FA 41 B8 ? ? ? ? 48 8D 54 24 ? 48 8B 80 ? ? ? ? FF 15 ? ? ? ? 48 8B 18 48 8B 43 ? 48 83 B8 ? ? ? ? ? 75 ? 39 7B ? 74 ? 8B D7 48 8B CB E8 ? ? ? ? 48 8B 4B ? 48 8B D3 89 43 ? E8 ? ? ? ? 48 8B 43 ? 48 8B 88 ? ? ? ? 48 85 C9 74 ? C6 44 24 ? ? 48 8D 54 24 ? 48 8B 01 48 8B 40 ? FF 15 ? ? ? ? 48 8B 4C 24 ? 48 33 CC E8 ? ? ? ? 48 8B 5C 24 ? 48 83 C4 ? 5F C3 CC CC CC CC CC CC CC CC CC CC CC CC 48 89 5C 24",
+                        PatchOffset = 0,
+                        PatchBytes = BytePatternParser.ParseExactBytes("C3")
+                    }
+                ]
+            },
+            new PatchDefinition
+            {
+                Id = "custom-block-shape-gdk",
+                DisplayName = "CustomBlockShape (GDK)",
+                Category = "visual",
+                Description = "Allows custom block shapes to be used. Changes JNE to JMP.",
+                Source = "GDK patcher",
+                Variants =
+                [
+                    new PatchVariant
+                    {
+                        Label = "GDK",
+                        SearchPattern = "75 ? 48 8B 45 ? 48 8B 48 ? 48 81 C1",
+                        PatchOffset = 0,
+                        PatchBytes = BytePatternParser.ParseExactBytes("EB")
+                    }
+                ]
+            },
         ];
     }
 }
